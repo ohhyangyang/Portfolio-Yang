@@ -298,7 +298,7 @@ img{
         overflow: hidden;
         
         & img{
-            border-radius: .5rem;
+            // border-radius: .5rem;
         }
         
         &:hover .portfolio__link{
@@ -315,7 +315,7 @@ img{
         justify-content: center;
         align-items: center;
         background: rgba(255, 255, 255, 0.3);
-        border-radius: .5rem;
+        // border-radius: .5rem;
         cursor: pointer;
         backdrop-filter: blur(10px);
         transition: .3s;
