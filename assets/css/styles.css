@@ -276,7 +276,7 @@ img {
 .skills__container {
   row-gap: 2rem;
 }
-.skills__subtitle {
+.skills__subtitle{
   color: var(--first-color);
   margin-bottom: var(--mb-3);
 }
@@ -287,14 +287,14 @@ img {
   margin-bottom: var(--mb-3);
   padding: 0.25rem 0.5rem;
   background-color: var(--white-color);
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 }
 .skills__name:hover {
   background-color: var(--first-color);
   color: var(--white-color);
 }
 .skills__img img {
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 
 /* ===== PORTFOLIO =====*/
@@ -310,7 +310,7 @@ img {
   overflow: hidden;
 }
 .portfolio__img img {
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   /* height: 200px; */
 
 }
@@ -346,6 +346,12 @@ img {
 .contact__text {
   display: inline-block;
   margin-bottom: var(--mb-2);
+}
+.contact__text.email{
+  text-decoration: underline;
+}
+.contact__text.email:hover{
+  color: #ffdc4e;
 }
 .contact__inputs {
   display: grid;
