@@ -295,6 +295,8 @@ img {
 }
 .skills__img img {
   /* border-radius: 0.5rem; */
+  /* filter: hue-rotate(80deg); */
+  /* height: 400px; */
 }
 
 /* ===== PORTFOLIO =====*/
