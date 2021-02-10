@@ -75,6 +75,61 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
+/*===== CURSOR ANIMATION =====*/
+
+/*CURSOR*/
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+(e.pageY - 40)+"px; left: "+(e.pageX - 40)+"px;")
+})
+
+document.addEventListener('wheel', e => {
+
+    cursor.setAttribute("style", "top: "+(e.pageY - 30)+"px; left: "+(e.pageX - 30)+"px; transition-duration: 0ms;")
+})
+
+// document.addEventListener('click', () => {
+//     cursor.classList.add("expand");
+
+//     setTimeout(() => {
+//         cursor.classList.remove("expand");
+//     }, 500)
+// })
+
+/*CURSOR ON NAVLINKS*/
+const navLinks=document.querySelectorAll('.nav__item');
+
+navLinks.forEach(link=>{
+    link.addEventListener('mouseover',()=>{
+        cursor.classList.add('expand')
+        const linkChild=link.querySelector('a');
+        cursor.innerHTML=linkChild.innerHTML
+        cursor.setAttribute("style", "color:black")
+    })
+
+    link.addEventListener('mouseleave',()=>{
+        cursor.classList.remove('expand')
+        cursor.innerHTML=''
+    })
+})
+
+/*CURSOR ON PROJECTS*/
+
+const works=document.querySelectorAll('.portfolio__link-name');
+works.forEach(work=>{
+    work.addEventListener('mouseover',()=>{
+        cursor.classList.add('expand')
+
+        cursor.innerHTML='OPEN'
+        cursor.setAttribute("style", "color:black")
+    })
+
+    work.addEventListener('mouseleave',()=>{
+        cursor.classList.remove('expand')
+        cursor.innerHTML=''
+    })
+})
 
 
 
