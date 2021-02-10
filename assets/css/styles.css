@@ -100,7 +100,7 @@ img {
 .section-title::after {
   position: absolute;
   content: "";
-  width: 90%;
+  width: 95%;
   height: 1px;
   left: 0;
   right: 0;
