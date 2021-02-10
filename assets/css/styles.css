@@ -162,9 +162,7 @@ img {
   color: var(--white-color);
 }
 .nav__small{
-  font-weight: 300;
-  color: var(--white-color);
-  margin-left: 40px;
+  display:none
 }
 .nav__toggle {
   color: var(--white-color);
@@ -487,6 +485,12 @@ img {
   .nav__link:hover {
     color: var(--white-color);
   }
+  .nav__small{
+    display: inline;
+    font-weight: 300;
+    color: var(--white-color);
+    margin-left: 40px;
+  }
   .active::after {
     background-color: var(--white-color);
   }
@@ -500,6 +504,7 @@ img {
     width: 524px;
     right: 10%;
   }
+  
 
   .about__container {
     grid-template-columns: repeat(2, 1fr);
