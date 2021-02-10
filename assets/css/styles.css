@@ -95,17 +95,18 @@ img {
   color: var(--dark-color);
   margin: var(--mb-4) 0;
   text-align: center;
+  /* font-weight: 300; */
 }
 .section-title::after {
   position: absolute;
   content: "";
-  width: 32px;
-  height: 0.18rem;
+  width: 90%;
+  height: 1px;
   left: 0;
   right: 0;
   margin: auto;
   top: 2rem;
-  background-color: var(--first-color);
+  background-color: var(--text-color);
 }
 
 /*===== LAYOUT =====*/
@@ -159,6 +160,11 @@ img {
 }
 .nav__logo {
   color: var(--white-color);
+}
+.nav__small{
+  font-weight: 300;
+  color: var(--white-color);
+  margin-left: 40px;
 }
 .nav__toggle {
   color: var(--white-color);
@@ -254,7 +260,7 @@ img {
 }
 .about__subtitle {
   font-size: var(--h2-font-size);
-  color: var(--first-color);
+  color: var(--dark-color);
   margin-bottom: var(--mb-1);
 }
 .about__text {
@@ -281,16 +287,17 @@ img {
   row-gap: 2rem;
 }
 .skills__subtitle{
-  color: var(--first-color);
+  color: var(--dark-color);
   margin-bottom: var(--mb-3);
 }
 .skills__name {
   display: inline-block;
   font-size: var(--small-font-size);
+  font-weight: 300;
   margin-right: var(--mb-2);
-  margin-bottom: var(--mb-3);
+  margin-bottom: var(--mb-1);
   padding: 0.25rem 0.5rem;
-  background-color: var(--white-color);
+  /* background-color: var(--white-color); */
   /* border-radius: 0.25rem; */
 }
 .skills__name:hover {
@@ -364,6 +371,14 @@ img {
 }
 .portfolio__link-name:hover{
   box-shadow: 0px 2px 0 white;
+}
+
+.portfolio__coming{
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 0.8rem;
 }
 
 /* ===== CONTACT =====*/
@@ -449,7 +464,7 @@ img {
     margin-bottom: 3rem;
   }
   .section-title::after {
-    width: 64px;
+    max-width: 1200px;
     top: 3rem;
   }
 
