@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -18,30 +18,35 @@
 <body>
     <!--===== HEADER =====-->
     <header class="l-header">
+
         <nav class="nav bd-grid">
             <div class=" nav-top">
-                <a href="#" class="nav__logo">GE YANG</a>
+                <a href="#" class="nav__logo"> <span class="yellow">< </span> GE YANG <span class="yellow">/></span> </a>
                 <span class="nav__small"> Research + Design + Web develope + 💛</span>
+
             </div>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#portfolio" class="nav__link">Works</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
+
 
             <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+                <!-- <span class="menu-btn__burger"></span> -->
+                <a href="./works.html"><span class="yellow"> < </span> WORKS<span class="yellow">/></span></a>
             </div>
 
-            
+
         </nav>
     </header>
+    <div class="nav__menu" id="nav-menu">
+        <div class="cursor"></div>
+        <ul class="nav__list">
+            <!-- <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li> -->
+            <!-- <li class="nav__item"><a href="#about" class="nav__link">About</a></li> -->
+            <li class="nav__item"><a href="#portfolio" class="nav__link">Works</a></li>
+            <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
+
+            <!-- <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> -->
+        </ul>
+    </div>
 
     <main class="l-main">
         <!--===== HOME =====-->
@@ -66,12 +71,14 @@
                     <img src="assets/img/perfil.png" alt="">
                 </div>
 
-                <div>
+                <div class="about__me">
                     <h2 class="about__subtitle">GE YANG </h2>
                     <!-- <span class="about__profession">Full-Stack Developer</span> -->
-                    <p class="about__text">Hi there ✌️!!  My name is Yang, a <span class="yellow">programmer</span> with divergent ideas and visions. I live in the sunny Barcelona☀️.
+                    <p class="about__text">Hi there ✌️!! My name is Yang, a <span class="yellow">programmer</span> with
+                        divergent ideas and visions. I live in the sunny Barcelona☀️.
                     </p>
-                    <p class="about__text">At the moment I met with programming, my heart was taken over, and from then on I knew I
+                    <p class="about__text">At the moment I met with programming, my heart was taken over, and from then
+                        on I knew I
                         want to be a
                         programmer. I started this journey as a <span class="yellow">self-starter</span> two years ago,
                         and I kept myself <span class="yellow">learning by doing</span> small projects in order to
@@ -86,7 +93,8 @@
                             class="yellow">conceptual and constructive designs</span>.
                         On my free time I like traveling, going outdoor and discovering new things of this world.
                     </p>
-                    <p class="about__text">Currently I am looking for a job and always ready to overcome the next challenges … Get
+                    <p class="about__text">Currently I am looking for a job and always ready to overcome the next
+                        challenges … Get
                         in touch!</p>
 
                     <div class="about__social">
@@ -94,7 +102,8 @@
                                 class='bx bxl-linkedin'></i></a>
                         <a href="https://github.com/ohhyangyang" class="about__social-icon"><i
                                 class='bx bxl-github'></i></a>
-                        <a href="mailto:yang.ge.bcn@gmail.com" class="about__social-icon"><i class='bx bx-envelope' ></i></a>
+                        <a href="mailto:yang.ge.bcn@gmail.com" class="about__social-icon"><i
+                                class='bx bx-envelope'></i></a>
                     </div>
                 </div>
             </div>
@@ -103,132 +112,59 @@
 
 
         <!--===== PORTFOLIO =====-->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section-title">SOME WORKS OF MINE</h2>
 
-            <div class="portfolio__container bd-grid">
-                <div class="portfolio__img">
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">CHECK OUT MY SKILLS</h2>
 
-                    <div class="portfolio__link">
-                        
-                        <a href="https://wusic-app.herokuapp.com/" target="_blank" class="portfolio__link-name">Wusic</a>
-                        <p>Project-based musician platform</p>
-                        <br>
-                        <p class="small">Don't want to sign up? Use this one: </p>
-                        <p class="small">username: Soko  </p>
-                        <p class="small">psd: soko123</p>
-                    </div>
-                    <img src="assets/img/work1.png" alt="">
+            <div class="skills__container bd-grid">
+                <div class="skills__box">
+                    <h3 class="skills__subtitle">Web develope</h3>
+                    <span class="skills__name">HTML</span>
+                    <span class="skills__name">CSS</span>
+                    <span class="skills__name">JavaScript</span>
+                    <span class="skills__name">jQuery</span>
+                    <span class="skills__name">Sass</span>
+                    <span class="skills__name">Bootstrap</span>
+                    <span class="skills__name">AJAX</span>
+                    <span class="skills__name">React</span>
+                    <span class="skills__name">NodeJS</span>
+                    <span class="skills__name">ExpressJS</span>
+                    <span class="skills__name">MongoDB</span>
+                    <span class="skills__name">Wordpress</span>
+                    <span class="skills__name">Git & GitHub</span>
 
-                    
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work3.png" alt="">
+                    <h3 class="skills__subtitle">Research</h3>
+                    <span class="skills__name">Self-direction and survey</span>
+                    <span class="skills__name">Data collection and analysis</span>
+                    <span class="skills__name">Content Analysis</span>
+                    <span class="skills__name">Problem shooting</span>
+                    <span class="skills__name">Mode and procedure mapping</span>
+                    <span class="skills__name">Prototyping</span>
 
-                    <div class="portfolio__link">
-                        <a href="https://geyang.me/M1-Project/" target="_blank" class="portfolio__link-name">CosLib</a>
-                        <p>Beauty products library</p>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work6.png" alt="">
+                    <h3 class="skills__subtitle">2D/3D Graphic</h3>
+                    <span class="skills__name">Photoshop</span>
+                    <span class="skills__name">InDesign</span>
+                    <span class="skills__name">Illustrator</span>
+                    <span class="skills__name">AutoCAD</span>
+                    <span class="skills__name">Sketchup</span>
+                    <span class="skills__name">Rihnoceros</span>
 
-                    <div class="portfolio__link">
-                        <a href="https://drive.google.com/file/d/1H7foBJZ2M-NYxX2VR_uNlm9sutbAe3sD/view?usp=sharing" target="_blank"
-                            class="portfolio__link-name">Architecture design</a>
-                            <p>Architecture portfolio</p>
-                    </div>
-                </div>
-                
-                
-                <div class="portfolio__img">
-                    <img src="assets/img/work4.png" alt="">
+                    <h3 class="skills__subtitle">UX/UI</h3>
+                    <span class="skills__name">Figma</span>
+                    <span class="skills__name">Balsamiq</span>
+                    <span class="skills__name">Miro</span>
 
-                    <div class="portfolio__link">
-                        <a href="https://www.matachana.com/User-Help-Tools/HPO/1_Preparing-the-load_en.html" target="_blank"
-                            class="portfolio__link-name">HPO Tutorial</a>
-                            <p>Product tutorial for MATACHANA</p>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work2.png" alt="">
 
-                    <div class="portfolio__link">
-                        <a href="https://x-book.herokuapp.com/" target="_blank" class="portfolio__link-name">X-Book</a>
-                        <p>Book exchange platform</p>
-                        <br>
-                        <p class="small">Don't want to sign up? Use this one: </p>
-                        <p class="small">username: juliane  </p>
-                        <p class="small"> psd: juliane123</p>
-                    </div>
-                </div>
-                <div class="portfolio__img">
-                    <img src="assets/img/work5.png" alt="">
 
-                    <div class="portfolio__link">
-                        <a href="https://albertpastor.cat/" target="_blank" class="portfolio__link-name">Music web</a>
-                        <p>Website for a Catalan songwriter</p>
-                    </div>
+
                 </div>
 
-                
-                
+                <div class="skills__img">
+                    <img src="assets/img/skill.png" alt="">
+                </div>
             </div>
-            <p class="portfolio__coming">More projects are on the way</p>
         </section>
-
-                <!--===== SKILLS =====-->
-                <section class="skills section" id="skills">
-                    <h2 class="section-title">CHECK OUT MY SKILLS</h2>
-        
-                    <div class="skills__container bd-grid">
-                        <div class="skills__box">
-                            <h3 class="skills__subtitle">Web develope</h3>
-                            <span class="skills__name">HTML</span>
-                            <span class="skills__name">CSS</span>
-                            <span class="skills__name">JavaScript</span>
-                            <span class="skills__name">jQuery</span>
-                            <span class="skills__name">Sass</span>
-                            <span class="skills__name">Bootstrap</span>
-                            <span class="skills__name">AJAX</span>
-                            <span class="skills__name">React</span>
-                            <span class="skills__name">NodeJS</span>
-                            <span class="skills__name">ExpressJS</span>
-                            <span class="skills__name">MongoDB</span>
-                            <span class="skills__name">Wordpress</span>
-                            <span class="skills__name">Git & GitHub</span>
-        
-                            <h3 class="skills__subtitle">Research</h3>
-                            <span class="skills__name">Self-direction and survey</span>
-                            <span class="skills__name">Data collection and analysis</span>
-                            <span class="skills__name">Content Analysis</span>
-                            <span class="skills__name">Problem shooting</span>
-                            <span class="skills__name">Mode and procedure mapping</span>                   
-                            <span class="skills__name">Prototyping</span>
-
-                            <h3 class="skills__subtitle">2D/3D Graphic</h3>
-                            <span class="skills__name">Photoshop</span>
-                            <span class="skills__name">InDesign</span>
-                            <span class="skills__name">Illustrator</span>
-                            <span class="skills__name">AutoCAD</span>
-                            <span class="skills__name">Sketchup</span>
-                            <span class="skills__name">Rihnoceros</span>
-
-                            <h3 class="skills__subtitle">UX/UI</h3>
-                            <span class="skills__name">Figma</span>
-                            <span class="skills__name">Balsamiq</span>
-                            <span class="skills__name">Miro</span>
-
-                            
-
-                            
-                        </div>
-        
-                        <div class="skills__img">
-                            <img src="assets/img/skill.png" alt="">
-                        </div>
-                    </div>
-                </section>
 
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
@@ -237,7 +173,8 @@
             <div class="contact__container bd-grid">
                 <div class="contact__info">
                     <h3 class="contact__subtitle">EMAIL</h3>
-                    <span class="contact__text email"><a href="mailto:yang.ge.bcn@gmail.com">yang.ge.bcn@gmail.com</a></span>
+                    <span class="contact__text email"><a
+                            href="mailto:yang.ge.bcn@gmail.com">yang.ge.bcn@gmail.com</a></span>
 
 
                     <h3 class="contact__subtitle">PHONE</h3>
@@ -258,6 +195,7 @@
                         <input type="submit" value="Enviar" class="contact__button">
                     </form> -->
             </div>
+            <!-- <h2 class="footer__title">GE YANG | 2021</h2> -->
         </section>
     </main>
 
@@ -265,8 +203,8 @@
     <footer class="footer section">
         <div class="footer__container bd-grid">
             <div class="footer__data">
-                <h2 class="footer__title">GE YANG</h2>
-                <p class="footer__text">2021</p>
+                <h2 class="footer__title">GE YANG | 2021</h2>
+                <!-- <p class="footer__text">2021</p> -->
             </div>
 
             <div class="footer__data">
@@ -276,7 +214,7 @@
                     <li><a href="#about" class="footer__link">About</a></li>
                     <li><a href="#portfolio" class="footer__link">Works</a></li>
                     <li><a href="#skills" class="footer__link">Skills</a></li>
-                    
+
                     <li><a href="#Contact" class="footer__link">Contact</a></li>
                 </ul>
             </div>

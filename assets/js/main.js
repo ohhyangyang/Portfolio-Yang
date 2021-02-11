@@ -1,24 +1,26 @@
 /*===== MENU SHOW =====*/ 
-const showMenu = (toggleId, navId) =>{
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+// const showMenu = (toggleId, navId,burgerId) =>{
+//     const toggle = document.getElementById(toggleId),
+//     nav = document.getElementById(navId)
+//     burger = document.querySelector(burgerId);
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-}
-showMenu('nav-toggle','nav-menu')
+  
+//         toggle.addEventListener('click', ()=>{
+//             nav.classList.toggle('show')
+//             burger.classList.toggle('open')
+//         })
+    
+// }
+// showMenu('nav-toggle','nav-menu','.menu-btn__burger')
 
 /*===== REMOVE MENU MOBILE =====*/
-const navLink = document.querySelectorAll('.nav__link')
+// const navLink = document.querySelectorAll('.nav__link')
 
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+// function linkAction(){
+//     const navMenu = document.getElementById('nav-menu')
+//     navMenu.classList.remove('show')
+// }
+// navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*===== SCROLL SECTIONS ACTIVE LINK =====*/
 const sections = document.querySelectorAll('section[id]')
@@ -78,7 +80,7 @@ sr.reveal('.contact__button', {delay: 600})
 /*===== CURSOR ANIMATION =====*/
 
 /*CURSOR*/
-const cursor = document.querySelector('.cursor');
+const cursor = document.querySelectorAll('.cursor')[1];
 
 document.addEventListener('mousemove', e => {
     cursor.setAttribute("style", "top: "+(e.pageY - 40)+"px; left: "+(e.pageX - 40)+"px;")
@@ -88,33 +90,6 @@ document.addEventListener('wheel', e => {
 
     cursor.setAttribute("style", "top: "+(e.pageY - 30)+"px; left: "+(e.pageX - 30)+"px; transition-duration: 0ms;")
 })
-
-// document.addEventListener('click', () => {
-//     cursor.classList.add("expand");
-
-//     setTimeout(() => {
-//         cursor.classList.remove("expand");
-//     }, 500)
-// })
-
-/*CURSOR ON NAVLINKS*/
-const navLinks=document.querySelectorAll('.nav__item');
-
-navLinks.forEach(link=>{
-    link.addEventListener('mouseover',()=>{
-        cursor.classList.add('expand')
-        const linkChild=link.querySelector('a');
-        cursor.innerHTML=linkChild.innerHTML
-        cursor.setAttribute("style", "color:black")
-    })
-
-    link.addEventListener('mouseleave',()=>{
-        cursor.classList.remove('expand')
-        cursor.innerHTML=''
-    })
-})
-
-/*CURSOR ON PROJECTS*/
 
 const works=document.querySelectorAll('.portfolio__link-name');
 works.forEach(work=>{
@@ -131,5 +106,14 @@ works.forEach(work=>{
     })
 })
 
+/*===== MENU CURSOR ANIMATION =====*/
+const menuCursor = document.querySelectorAll('.cursor')[0];
+document.addEventListener('mousemove', e => {
+    menuCursor.setAttribute("style", "top: "+(e.pageY - 40)+"px; left: "+(e.pageX - 40)+"px;")
+})
 
+// document.addEventListener('wheel', e => {
+
+//     menuCursor.setAttribute("style", "top: "+(e.pageY - 30)+"px; left: "+(e.pageX - 30)+"px; transition-duration: 0ms;")
+// })
 
