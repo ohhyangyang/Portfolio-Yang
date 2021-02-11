@@ -59,6 +59,7 @@
 html {
   scroll-behavior: smooth;
   background-color: var(--first-color);
+  isolation: isolate;
 
 }
 body {
@@ -130,6 +131,10 @@ img {
   left: 0;
   z-index: var(--z-fixed);
   mix-blend-mode: difference;
+  -webkit-mix-blend-mode: difference;
+       -moz-mix-blend-mode: difference;
+       -o-mix-blend-mode: difference;
+       -ms-mix-blend-mode: difference;
 
   /* background-color: var(--first-color); */
   
@@ -141,11 +146,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* mix-blend-mode: difference; */
+
 }
 .nav-top {
-  /* z-index: 102; */
-  /* mix-blend-mode: difference; */
+
 }
 .nav-top .yellow {
   color: var(--second-color);
@@ -159,7 +163,7 @@ img {
   height: 100vh;
   padding: 2rem;
   background-color: rgba(255, 255, 255, 1);
-  /* mix-blend-mode: normal; */
+
   transition: 0.5s;
   /* backdrop-filter: blur(10px); */
   z-index: 99;
@@ -227,49 +231,7 @@ img {
 
 }
 
-/*.menu-btn__burger {
-	position: absolute; 
 
-	top: 1.5rem;
-	width: 25px;
-	height: 2px;
-	background: #fff;
-	transition: all 0.5s ease-in-out;
-}
-
- .menu-btn__burger::before {
-	content: '';
-	position: absolute;
-	top: -5px;
-	width: 26px;
-	height: 2px;
-	background-color: #fff;
-	transition: all 0.5s ease-in-out;
-}
-
-.menu-btn__burger::after {
-	content: '';
-	position: absolute;
-	top: 5px;
-	width: 25px;
-	height: 2px;
-	background-color: #fff;
-	transition: all 0.5s ease-in-out;
-}
-
-.menu-btn__burger.open {
-	transform: rotate(720deg);
-	background: transparent;
-}
-
-.menu-btn__burger.open::before {
-	transform: rotate(45deg) translate(0px, 7px);
-}
-
-.menu-btn__burger.open::after {
-	width: 28px;
-	transform: rotate(-45deg) translate(0px, -8px);
-} */
 
 
 /*Active menu*/
@@ -351,6 +313,7 @@ img {
   width: 120px;
   height: 120px;
   background-color: var(--first-color);
+
   border-radius: 50%;
   overflow: hidden;
 }
@@ -358,7 +321,7 @@ img {
   width: 100px;
 }
 .about__me {
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 .about__subtitle {
   font-size: var(--h2-font-size);
@@ -366,11 +329,13 @@ img {
   margin-bottom: var(--mb-1);
   transition: all 0.2s ease-in-out;
   display: inline-block;
+  mix-blend-mode: difference;
 }
 
 .about__text {
   margin-bottom: var(--mb-4);
   font-weight: 500;
+  mix-blend-mode: difference;
 }
 .about__profession {
   display: block;
@@ -393,6 +358,7 @@ img {
   color: var(--second-color);
   margin-bottom: var(--mb-2);
   font-size: 1.8rem;
+  mix-blend-mode: difference;
 }
 .skills__name {
   display: inline-block;
@@ -401,17 +367,18 @@ img {
   margin-right: var(--mb-1);
   margin-bottom: var(--mb-1);
   padding: 0.25rem 0.5rem;
-  /* background-color: var(--white-color); */
-  /* border-radius: 0.25rem; */
+  mix-blend-mode: difference;
 }
-/* .skills__name:hover {
-  background-color: var(--first-color);
-  color: var(--white-color);
-} */
 .skills__img img {
   /* border-radius: 0.5rem; */
   /* filter: hue-rotate(80deg); */
   /* height: 400px; */
+  z-index: -100;
+  /* mix-blend-mode: difference; */
+}
+
+.skills__img{
+  mix-blend-mode:luminosity;
 }
 
 
@@ -419,17 +386,19 @@ img {
 /* ===== CONTACT =====*/
 .contact__container {
   row-gap: 2rem;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 .contact__subtitle {
   font-size: 1.8rem;
   color: var(--second-color);
+  mix-blend-mode: difference;
 }
 .contact__text {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 300;
   /* margin-bottom: var(--mb-4); */
+  mix-blend-mode: difference;
 }
 .contact__text.email {
   text-decoration: underline;
@@ -462,6 +431,12 @@ img {
   outline: none;
   font-size: var(--normal-font-size);
   cursor: pointer;
+}
+
+.contact__name{
+  margin-top: 100px;
+  font-weight: 300;
+  mix-blend-mode: difference;
 }
 
 /* ===== FOOTER=====*/
@@ -568,7 +543,7 @@ img {
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
   }
 
   .portfolio__container {
@@ -606,6 +581,7 @@ img {
     justify-content: center;
     align-items: center;
     color: var(--dark-color);
+  
   }
 
   .expand {
@@ -672,6 +648,7 @@ img {
   align-items: center;
   /* background-color: rgba(255, 255, 255, 0.3); */
   background-color: var(--first-color);
+
   /* border-radius: 0.5rem; */
 
   backdrop-filter: blur(10px);
