@@ -356,7 +356,7 @@ img {
 .skills__name {
   display: inline-block;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-right: var(--mb-1);
   margin-bottom: var(--mb-1);
   padding: 0.25rem 0.5rem;
@@ -383,7 +383,7 @@ img {
 .contact__text {
   display: inline-block;
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
   /* margin-bottom: var(--mb-4); */
   
 }
