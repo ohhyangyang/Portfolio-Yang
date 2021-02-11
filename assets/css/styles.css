@@ -130,13 +130,8 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  mix-blend-mode: difference;
-  -webkit-mix-blend-mode: difference;
-       -moz-mix-blend-mode: difference;
-       -o-mix-blend-mode: difference;
-       -ms-mix-blend-mode: difference;
+  
 
-  /* background-color: var(--first-color); */
   
 }
 
@@ -320,22 +315,20 @@ img {
 .about__img img {
   width: 100px;
 }
-.about__me {
-  /* mix-blend-mode: difference; */
-}
+
 .about__subtitle {
   font-size: var(--h2-font-size);
   color: var(--second-color);
   margin-bottom: var(--mb-1);
   transition: all 0.2s ease-in-out;
   display: inline-block;
-  mix-blend-mode: difference;
+  
 }
 
 .about__text {
   margin-bottom: var(--mb-4);
   font-weight: 500;
-  mix-blend-mode: difference;
+  
 }
 .about__profession {
   display: block;
@@ -358,7 +351,7 @@ img {
   color: var(--second-color);
   margin-bottom: var(--mb-2);
   font-size: 1.8rem;
-  mix-blend-mode: difference;
+  
 }
 .skills__name {
   display: inline-block;
@@ -367,38 +360,32 @@ img {
   margin-right: var(--mb-1);
   margin-bottom: var(--mb-1);
   padding: 0.25rem 0.5rem;
-  mix-blend-mode: difference;
+  
 }
 .skills__img img {
-  /* border-radius: 0.5rem; */
-  /* filter: hue-rotate(80deg); */
-  /* height: 400px; */
-  z-index: -100;
-  /* mix-blend-mode: difference; */
+
 }
 
-.skills__img{
-  mix-blend-mode:luminosity;
-}
+
 
 
 
 /* ===== CONTACT =====*/
 .contact__container {
   row-gap: 2rem;
-  /* mix-blend-mode: difference; */
+
 }
 .contact__subtitle {
   font-size: 1.8rem;
   color: var(--second-color);
-  mix-blend-mode: difference;
+  
 }
 .contact__text {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 300;
   /* margin-bottom: var(--mb-4); */
-  mix-blend-mode: difference;
+  
 }
 .contact__text.email {
   text-decoration: underline;
@@ -436,7 +423,7 @@ img {
 .contact__name{
   margin-top: 100px;
   font-weight: 300;
-  mix-blend-mode: difference;
+
 }
 
 /* ===== FOOTER=====*/
@@ -479,6 +466,10 @@ img {
   .section-title::after {
     max-width: 1200px;
     top: 3rem;
+  }
+
+  .l-header{
+    mix-blend-mode: difference;
   }
 
   .nav__toggle{
@@ -535,6 +526,13 @@ img {
   .about__img img {
     width: 165px;
   }
+  .about__subtitle{
+    mix-blend-mode: difference;
+  }
+
+  .about__text{
+    mix-blend-mode: difference;
+  }
 
   .about__social-icon:hover {
     color: var(--highlight-color);
@@ -544,6 +542,18 @@ img {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     /* mix-blend-mode: difference; */
+  }
+
+  .skills__subtitle{
+    mix-blend-mode: difference;
+  }
+
+  .skills__name{
+    mix-blend-mode: difference;
+  }
+
+  .skills__img{
+    mix-blend-mode:luminosity;
   }
 
   .portfolio__container {
@@ -558,6 +568,18 @@ img {
   }
   .contact__form {
     width: 380px;
+  }
+
+  .contact__subtitle {
+    mix-blend-mode: difference;
+  }
+
+  .contact__text {
+    mix-blend-mode: difference;
+  }
+
+  .contact__name{
+    mix-blend-mode: difference;
   }
 
   .footer__container {
