@@ -80,7 +80,7 @@ sr.reveal('.contact__button', {delay: 600})
 /*===== CURSOR ANIMATION =====*/
 
 /*CURSOR*/
-const cursor = document.querySelectorAll('.cursor')[1];
+const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
     cursor.setAttribute("style", "top: "+(e.pageY - 40)+"px; left: "+(e.pageX - 40)+"px;")
@@ -91,29 +91,38 @@ document.addEventListener('wheel', e => {
     cursor.setAttribute("style", "top: "+(e.pageY - 30)+"px; left: "+(e.pageX - 30)+"px; transition-duration: 0ms;")
 })
 
+
+/*===== CURSOR EXPANSION =====*/
+
+/*OVER ORIJECTS*/
 const works=document.querySelectorAll('.portfolio__link-name');
-works.forEach(work=>{
-    work.addEventListener('mouseover',()=>{
+
+function cursorExpand(obj,cursor,str=''){
+    obj.addEventListener('mouseover',()=>{
         cursor.classList.add('expand')
 
-        cursor.innerHTML='OPEN'
+        cursor.innerHTML=str
         cursor.setAttribute("style", "color:black")
     })
 
-    work.addEventListener('mouseleave',()=>{
+    obj.addEventListener('mouseleave',()=>{
         cursor.classList.remove('expand')
         cursor.innerHTML=''
     })
+}
+
+works.forEach(work=>{
+    
+    cursorExpand(work,cursor,'OPEN')
 })
 
-/*===== MENU CURSOR ANIMATION =====*/
-const menuCursor = document.querySelectorAll('.cursor')[0];
-document.addEventListener('mousemove', e => {
-    menuCursor.setAttribute("style", "top: "+(e.pageY - 40)+"px; left: "+(e.pageX - 40)+"px;")
-})
+/*OVER NAVS*/
+const navLogo=document.querySelector('.nav__logo');
+const navWork=document.querySelector('.nav__works');
 
-// document.addEventListener('wheel', e => {
+cursorExpand(navLogo,cursor);
+cursorExpand(navWork,cursor);
 
-//     menuCursor.setAttribute("style", "top: "+(e.pageY - 30)+"px; left: "+(e.pageX - 30)+"px; transition-duration: 0ms;")
-// })
+
+
 
