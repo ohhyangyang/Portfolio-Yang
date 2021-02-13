@@ -59,7 +59,6 @@ html {
   scroll-behavior: smooth;
   background-color: var(--first-color);
   isolation: isolate;
-
 }
 body {
   margin: var(--header-height) 0 0 0;
@@ -130,9 +129,6 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  
-
-  
 }
 
 /*===== NAV =====*/
@@ -141,7 +137,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .nav-top .yellow {
@@ -160,11 +155,7 @@ img {
   transition: 0.5s;
   /* backdrop-filter: blur(10px); */
   z-index: 99;
-
 }
-
-
-
 
 .nav__item {
   margin-bottom: var(--mb-4);
@@ -179,15 +170,52 @@ img {
   color: var(--dark-color);
 }
 
-
 .nav__logo {
   display: inline-block;
   color: var(--white-color);
-  width: 180px;
-
+  width: 110px;
   transition: all 0.2s ease-in-out;
+  position: relative;
 }
 
+/*Hover menu*/
+.hover-item1:after {
+  background-color: var(--second-color);
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  width: 0px;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+}
+.nav__hover:hover .hover-item1:after{
+  width: 70px;
+}
+
+.hover-item2::after {
+  background-color: var(--second-color);
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  width: 0px;
+  height: 2px;
+  margin: 5px 0 0;
+  transition: all 0.2s ease-in-out;
+}
+.nav__hover:hover .hover-item2::after{
+  width: 60px;
+}
+
+/*Active menu*/
+.active1::after {
+  width: 70px;
+}
+.active2::after {
+  width: 60px;
+}
 
 
 .nav__small {
@@ -200,7 +228,7 @@ img {
 }
 
 /*=== Burger ===*/
-.nav__works{
+.nav__works {
   position: absolute;
   /* color: var(--white-color); */
   font-size: 1rem;
@@ -209,31 +237,16 @@ img {
   /* background-color: red; */
   right: 5vw;
   transition: all 0.2s ease-in-out;
-  
-  
 }
-.nav__works a{
+.nav__works a {
   color: var(--white-color);
 }
 
 .nav__works .yellow {
   color: var(--second-color);
-
 }
 
 
-
-
-/*Active menu*/
-.active::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
 
 /*===== HOME =====*/
 .home {
@@ -256,7 +269,6 @@ img {
   /* text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
   border: var(--second-color) 3px solid;
   border-radius: 50%;
-
 }
 .home__scroll {
   align-self: flex-end;
@@ -317,13 +329,11 @@ img {
   margin-bottom: var(--mb-1);
   transition: all 0.2s ease-in-out;
   display: inline-block;
-  
 }
 
 .about__text {
   margin-bottom: var(--mb-4);
   font-weight: 500;
-  
 }
 .about__profession {
   display: block;
@@ -346,7 +356,6 @@ img {
   color: var(--second-color);
   margin-bottom: var(--mb-2);
   font-size: 1.8rem;
-  
 }
 .skills__name {
   display: inline-block;
@@ -355,29 +364,22 @@ img {
   margin-right: var(--mb-1);
   margin-bottom: var(--mb-1);
   padding: 0.25rem 0.5rem;
-  
 }
-
 
 /* ===== CONTACT =====*/
 .contact__container {
   row-gap: 2rem;
-  
-
 }
-
 
 .contact__subtitle {
   font-size: 1.8rem;
   color: var(--second-color);
-  
 }
 .contact__text {
   display: inline-block;
   font-size: 1.2rem;
   font-weight: 400;
   /* margin-bottom: var(--mb-4); */
-  
 }
 .contact__text.email {
   text-decoration: underline;
@@ -412,10 +414,10 @@ img {
   cursor: pointer;
 }
 
-.contact__name{
+.contact__name {
   margin-top: 100px;
+  margin-bottom: 100px;
   font-weight: 300;
-
 }
 
 /* ===== FOOTER=====*/
@@ -444,36 +446,26 @@ img {
   color: var(--first-color);
 }
 
-
-
-
 /*------------------------WORKS----------------------------*/
 /* ===== PORTFOLIO =====*/
 
 .portfolio {
   margin-top: 50px;
-
-  
-  
 }
-.portfolio .section-title{
+.portfolio .section-title {
   z-index: 20;
 }
 .portfolio__container {
   justify-items: center;
   row-gap: 2rem;
-  
-  
 }
 .portfolio__img {
   position: relative;
   overflow: hidden;
-
 }
 .portfolio__img img {
   /* border-radius: 0.5rem; */
   /* height: 200px; */
-
 }
 .portfolio__link {
   position: absolute;
@@ -518,31 +510,17 @@ img {
 .portfolio__link-name:hover {
 }
 
-.portfolio__coming{
-  
-  
+.portfolio__coming {
 }
-.portfolio__coming p{
+.portfolio__coming p {
   text-align: center;
   margin-top: 50px;
   font-weight: 300;
   font-style: italic;
   font-size: 1.2rem;
- 
+
   color: var(--white-color);
-
-
-
-
-  
 }
-
-
-
-
-
-
-
 
 /* ===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
@@ -560,15 +538,15 @@ img {
     top: 3rem;
   }
 
-  .l-header{
+  .l-header {
     mix-blend-mode: difference;
   }
 
-  .nav__works{
+  .nav__works {
     right: 5vw;
   }
-  
-  .nav__small{
+
+  .nav__small {
     display: inline;
     font-weight: 300;
     color: var(--white-color);
@@ -579,16 +557,14 @@ img {
     color: var(--highlight-color);
   }
 
+  .nav__works:hover {
+    transform: scale(1.2);
+    color: var(--highlight-color);
+  }
 
-.nav__works:hover{
-  transform: scale(1.2);
-  color: var(--highlight-color);
-}
-
-.nav__works:hover a{
-
-  color: var(--highlight-color);
-}
+  .nav__works:hover a {
+    color: var(--highlight-color);
+  }
 
   .active::after {
     background-color: var(--white-color);
@@ -619,15 +595,13 @@ img {
     width: 165px;
   }
 
-  .about__me{
+  .about__me {
     mix-blend-mode: difference;
   }
-  .about__subtitle{
-   
+  .about__subtitle {
   }
 
-  .about__text{
-  
+  .about__text {
   }
 
   .about__social-icon:hover {
@@ -637,22 +611,19 @@ img {
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-
   }
 
-  .skills__box{
+  .skills__box {
     mix-blend-mode: difference;
   }
 
-  .skills__subtitle{
-   
+  .skills__subtitle {
   }
 
-  .skills__name{
- 
+  .skills__name {
   }
 
-  .skills__img{
+  .skills__img {
     mix-blend-mode: difference;
   }
 
@@ -668,9 +639,9 @@ img {
     /* z-index: 20; */
   }
 
-  .contact__info{
+  .contact__info {
     mix-blend-mode: difference;
-    
+
     z-index: 40;
   }
 
@@ -679,24 +650,20 @@ img {
   }
 
   .contact__subtitle {
-   
     z-index: 200;
   }
 
   .contact__text {
- 
     z-index: 200;
   }
 
-  .contact__name{
- 
+  .contact__name {
     z-index: 200;
   }
 
   .footer__container {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
-
   }
 
   /*===== CURSOR =====*/
@@ -715,14 +682,11 @@ img {
     justify-content: center;
     align-items: center;
     color: var(--dark-color);
-  
   }
 
-  .work-cursor{
+  .work-cursor {
     z-index: 20;
   }
-
-
 
   .expand {
     width: 90px;
@@ -747,7 +711,7 @@ img {
     color: var(--highlight-color);
   }
 
-  .nav__works{
+  .nav__works {
     right: 10vw;
   }
 }
