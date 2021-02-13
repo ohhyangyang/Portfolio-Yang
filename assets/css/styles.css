@@ -264,7 +264,7 @@ img {
   font-size: var(--big-font-size);
   color: var(--white-color);
   line-height: 1.1;
-  z-index: -1;
+  z-index: -3;
 }
 .home__title span {
   /* text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
@@ -581,7 +581,7 @@ img {
   .home__img {
     width: 524px;
     right: 10%;
-    z-index: -3;
+    z-index: -2;
   }
 
   .about__container {
@@ -678,7 +678,7 @@ img {
     z-index: -2;
     border-radius: 50%;
     position: absolute;
-    transition-duration: 100ms;
+    transition-duration: 300ms;
     transition-timing-function: ease-out;
     pointer-events: none;
     display: flex;
