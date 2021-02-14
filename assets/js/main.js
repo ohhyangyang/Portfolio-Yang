@@ -116,7 +116,7 @@ works.forEach(work=>{
     cursorExpand(work,cursor,'OPEN')
 })
 
-/*OVER NAVS*/
+/*HOVER NAVS*/
 const navLogo=document.querySelector('.nav__logo');
 const navWork=document.querySelector('.nav__works');
 
@@ -125,11 +125,84 @@ cursorExpand(navWork,cursor);
 
 
 
-Splitting()
-ScrollOut({
-  targets: '.word',
-  scrollingElement: '.container',
+/*HOVER PROJECT TITLES*/
+// function handleTitiles(arr,target,listener,opacity1,opacity2,callback=false){
+//     target.addEventListener(listener,()=>{
+//         arr.forEach(item=>{
+//             item.setAttribute('style',`opacity:${opacity1};`)
+//             target.setAttribute('style',`opacity:${opacity2};`)
+//             callback && callback()
+//         })
+//     })
+// }
+
+
+const projectTitles = document.querySelectorAll('.portfolio__link-name p');
+const projectTitlesArr = [...projectTitles]
+projectTitlesArr.map(targetTitle=>{
+   
+    targetTitle.addEventListener('mouseover',()=>{
+        // console.log(event)
+        projectTitlesArr.forEach(title=>{
+            console.log(title)
+            title.setAttribute('style','opacity:0.4;')
+            targetTitle.setAttribute('style','opacity:1; ')
+        })
+    })
+    
+    // handleTitiles(projectTitlesArr,targetTitle,'mouseover',0.4,1);
+
+
+
+    targetTitle.addEventListener('mouseleave',(event)=>{
+        // console.log(event)
+        projectTitlesArr.forEach(title=>{
+            console.log(title)
+            title.setAttribute('style','opacity:1;')
+          
+        })
+    })
+
+
+    /*CLICK PROJECT TITLE*/
+    // targetTitle.addEventListener('click',()=>{
+    //     // console.log(event)
+    //     projectTitlesArr.forEach(title=>{
+  
+    //         title.setAttribute('style','opacity:0;')
+    //         targetTitle.setAttribute('style','opacity:1; ')
+
+    //         setTimeout(()=>{
+    //             window.location.replace("https://wusic-app.herokuapp.com/");
+    //         },1000)
+    //     })
+    // })
 })
+
+function clickProject(target,url){
+    target.addEventListener('click',()=>{
+        // console.log(event)
+        projectTitlesArr.forEach(title=>{
+  
+            title.setAttribute('style','opacity:0;')
+            target.setAttribute('style','opacity:1; ')
+
+            setTimeout(()=>{
+                window.location.assign(url);
+            },1000)
+        })
+    })
+}
+
+clickProject(projectTitlesArr[0],"https://wusic-app.herokuapp.com/")
+clickProject(projectTitlesArr[1],"https://geyang.me/M1-Project/")
+clickProject(projectTitlesArr[2],"https://drive.google.com/file/d/1H7foBJZ2M-NYxX2VR_uNlm9sutbAe3sD/view?usp=sharing")
+clickProject(projectTitlesArr[3],"https://x-book.herokuapp.com/")
+clickProject(projectTitlesArr[4],"https://www.matachana.com/User-Help-Tools/HPO/1_Preparing-the-load_en.html")
+clickProject(projectTitlesArr[5],"https://albertpastor.cat/")
+
+
+
 
 
 
