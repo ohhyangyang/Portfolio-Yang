@@ -125,4 +125,12 @@ cursorExpand(navWork,cursor);
 
 
 
+Splitting()
+ScrollOut({
+  targets: '.word',
+  scrollingElement: '.container',
+})
+
+
+
 

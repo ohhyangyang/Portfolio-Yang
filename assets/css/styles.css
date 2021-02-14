@@ -3,6 +3,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+
+
+
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -22,17 +26,24 @@
 /*===== Fuente y tipografia =====*/
 :root {
   --body-font: "Roboto";
-  --big-font-size: 6.25rem;
+  --big-font-size: 6rem;
   --h2-font-size: 1.5rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
 }
 @media screen and (min-width: 768px) {
   :root {
-    --big-font-size: 10.5rem;
+    --big-font-size: 9rem;
     --h2-font-size: 2rem;
     --normal-font-size: 1rem;
     --small-font-size: 0.875rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --big-font-size: 11rem;
+  
   }
 }
 
@@ -173,7 +184,7 @@ img {
 .nav__logo {
   display: inline-block;
   color: var(--white-color);
-  width: 110px;
+  width: 120px;
   transition: all 0.2s ease-in-out;
   position: relative;
 }
@@ -188,7 +199,7 @@ img {
   width: 0px;
   height: 2px;
   margin: 5px 0 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 .nav__hover:hover .hover-item1:after{
   width: 70px;
@@ -203,7 +214,7 @@ img {
   width: 0px;
   height: 2px;
   margin: 5px 0 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 .nav__hover:hover .hover-item2::after{
   width: 60px;
@@ -264,13 +275,179 @@ img {
   font-size: var(--big-font-size);
   color: var(--white-color);
   line-height: 1.1;
-  z-index: -3;
+  /* z-index: -1; */
 }
 .home__title span {
   /* text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
-  border: var(--second-color) 3px solid;
-  border-radius: 50%;
+  /* border: var(--second-color) 3px solid;
+  border-radius: 50%; */
 }
+
+/*---------title animation------------*/
+.title__anime{
+  cursor: pointer;
+  position: relative;
+}
+.title__anime h1{
+  position: relative;
+  letter-spacing: 2px;
+  font-size:var(--big-font-size);
+}
+
+.title__anime {
+  margin-bottom: 15px;
+}
+
+.title__anime span {
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+.title__anime span:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+  z-index: -5;
+}
+
+.share:hover > h1 > span:nth-child(1):after {
+  background: white;
+  width: 100%;
+  transition: 0.4s;
+  transition-delay: 100ms;
+  transform: rotate(-25deg);
+}
+
+.share:hover > h1 > span:nth-child(1) {
+  color: #39393B;
+  transition-delay: 110ms;
+}
+
+.share:hover > h1 > span:nth-child(2):after {
+  background: white;
+  width: 100%;
+  transition: 0.4s;
+  transition-delay: 200ms;
+  transform: rotate(-20deg);
+}
+
+.share:hover > h1 > span:nth-child(2) {
+  color: #39393B;
+  transition-delay: 220ms;
+}
+
+.share:hover > h1 > span:nth-child(3):after {
+  background: white;
+  width: 100%;
+  transition: 0.4s;
+  transition-delay: 300ms;
+  transform: rotate(-15deg);
+}
+
+.share:hover > h1 > span:nth-child(3) {
+  color: #39393B;
+  transition-delay: 330ms;
+}
+
+.share:hover > h1 > span:nth-child(4):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 400ms;
+  transform: rotate(-10deg);
+}
+
+.share:hover > h1 > span:nth-child(4) {
+  color: #39393B;
+  transition-delay: 440ms;
+}
+
+.share:hover > h1 > span:nth-child(5):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 500ms;
+  transform: rotate(-5deg);
+}
+
+.share:hover > h1 > span:nth-child(5) {
+  color: #39393B;
+  transition-delay: 550ms;
+}
+
+.share:hover > h1 > span:nth-child(6):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 600ms;
+  transform: rotate(0deg);
+}
+
+.share:hover > h1 > span:nth-child(6) {
+  color: #39393B;
+  transition-delay: 660ms;
+}
+
+.share:hover > h1 > span:nth-child(7):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 700ms;
+  transform: rotate(5deg);
+}
+
+.share:hover > h1 > span:nth-child(7) {
+  color: #39393B;
+  transition-delay: 770ms;
+}
+
+.share:hover > h1 > span:nth-child(8):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 800ms;
+  transform: rotate(10deg);
+}
+
+.share:hover > h1 > span:nth-child(8) {
+  color: #39393B;
+  transition-delay: 880ms;
+}
+
+.share:hover > h1 > span:nth-child(9):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 900ms;
+  transform: rotate(15deg);
+}
+
+.share:hover > h1 > span:nth-child(9) {
+  color: #39393B;
+  transition-delay: 990ms;
+}
+
+.share:hover > h1 > span:nth-child(10):after {
+  background: white;
+  width: 100%;
+  transition: 0.6s;
+  transition-delay: 1000ms;
+  transform: rotate(20deg);
+}
+
+.share:hover > h1 > span:nth-child(10) {
+  color: #39393B;
+  transition-delay: 1100ms;
+}
+
+
+
+
+
 .home__scroll {
   align-self: flex-end;
   padding-bottom: var(--mb-4);
@@ -577,6 +754,11 @@ img {
     height: 100vh;
     grid-template-rows: 1.7fr 1fr;
     row-gap: 0;
+  }
+
+  .home__title{
+    width: 60%;
+    /* z-index: -3; */
   }
   .home__img {
     width: 524px;
