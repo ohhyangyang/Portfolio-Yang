@@ -53,29 +53,29 @@ const sr = ScrollReveal({
 
 /*SCROLL HOME*/
 sr.reveal('.home__title', {})
-sr.reveal('.home__scroll', {delay: 200})
+sr.reveal('.home__scroll',)
 // sr.reveal('.home__img', {origin:'right'})
 
 /*SCROLL ABOUT*/
-sr.reveal('.about__img', {delay: 500})
-sr.reveal('.about__subtitle', {delay: 300})
-sr.reveal('.about__profession', {delay: 400})
-sr.reveal('.about__text', {delay: 500})
-sr.reveal('.about__social-icon', {delay: 600, interval: 200})
+sr.reveal('.about__img')
+sr.reveal('.about__subtitle')
+sr.reveal('.about__profession')
+sr.reveal('.about__text')
+sr.reveal('.about__social-icon')
 
 /*SCROLL SKILLS*/
-sr.reveal('.skills__subtitle', {})
-sr.reveal('.skills__name', {distance: '20px', delay: 50, interval: 100})
-sr.reveal('.skills__img', {delay: 400})
+sr.reveal('.skills__subtitle' )
+sr.reveal('.skills__name' )
+sr.reveal('.skills__img')
 
 /*SCROLL PORTFOLIO*/
 // sr.reveal('.portfolio__img', {})
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__subtitle', {})
-sr.reveal('.contact__text', {interval: 200})
-sr.reveal('.contact__input', {delay: 400})
-sr.reveal('.contact__button', {delay: 600})
+sr.reveal('.contact__text')
+sr.reveal('.contact__input')
+sr.reveal('.contact__button')
 
 
 
@@ -188,12 +188,17 @@ clickProject(projectTitlesArr[5],"https://albertpastor.cat/")
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-/*SCROLL ABOUT*/
+/*SCROLL*/
 // sr.reveal('.first-section div');
 
 
 
 const firstSection=document.querySelector('.first-section');
+
+const toTop = document.querySelector('.to-top');
+const workCursor=document.querySelector('.work-cursor');
+
+
 window.addEventListener('scroll',changeBackground);
 
 function changeBackground(){
@@ -203,13 +208,19 @@ function changeBackground(){
     console.log(sectionHeight)
     if(scrollY>sectionHeight){
         document.querySelector('.background').classList.add('colorTwo');
+        toTop.setAttribute('style','display:block;')
         // document.querySelector('.background').classList.remove('colorOne');
     }else{
         // document.querySelector('.background').classList.add('colorOne');
         document.querySelector('.background').classList.remove('colorTwo');
+        toTop.setAttribute('style','display:display;')
     }
 }
 
+/*toTop expasion*/
+
+console.log(toTop)
+cursorExpand(toTop,workCursor,'TOP')
 
 
 

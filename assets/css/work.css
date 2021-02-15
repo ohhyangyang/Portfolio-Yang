@@ -11,9 +11,14 @@ html {
   background-color: white;
 }
 
+body {
+  margin-top: 0;
+}
+
 .background {
   transition: background-color 700ms;
   background-color: var(--first-color);
+  margin-bottom: 20vh;
 }
 .background.colorTwo {
   background-color: white;
@@ -30,9 +35,10 @@ html {
   transform: scale(1.5);
 }
 .background .work-section {
-  margin-left: 20vw;
-  margin-right: 20vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
   font-weight: 300;
+  font-size: 1.2rem;
 }
 .background .first-section {
   padding-top: 15vh;
@@ -60,7 +66,7 @@ html {
   margin-left: 40px;
 }
 .background .second-section {
-  margin-top: 50vh;
+  margin-top: 40vh;
   color: var(--dark-color);
 }
 .background .second-section .text {
@@ -69,6 +75,9 @@ html {
 .background .second-section .text .title {
   font-size: 2.5rem;
   margin-top: 50px;
+  margin-bottom: 40px;
+  border-bottom: black 1px solid;
+  color: var(--first-color);
 }
 .background .second-section .text .small-title {
   font-size: 1.2rem;
@@ -77,24 +86,65 @@ html {
 }
 .background .second-section .text ul {
   list-style-type: circle;
-  margin-left: 10%;
+  margin-left: 5%;
   width: 80%;
 }
+.background .second-section .text ul li {
+  margin-top: 10px;
+}
+.background .second-section .text a {
+  color: black;
+  font-weight: 400;
+}
+.background .second-section .gallery img {
+  margin-bottom: 20px;
+}
 .background .cursor {
+  z-index: 1;
+}
+.background .cursor.expand {
+  width: 90px;
+  height: 90px;
+  color: var(--dark-color);
+  transition-duration: 200ms;
+}
+.background .to-top {
+  display: none;
   z-index: 0;
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+}
+.background .to-top i {
+  color: black;
+  transform: scale(3);
 }
 
 @media screen and (max-width: 768px) {
+  .background {
+    margin-bottom: 50px;
+  }
   .background .work-section {
     margin-left: 5vw;
     margin-right: 5vw;
+    font-size: 0.9rem;
   }
   .background .first-section {
     display: block;
     padding-top: 0px;
   }
+  .background .first-section .tools ul li {
+    margin-left: 10px;
+  }
   .background .first-section .title {
     margin-top: 10px;
+  }
+  .background .to-top {
+    right: 20px;
+    bottom: 30px;
+  }
+  .background .to-top i {
+    transform: scale(1.5);
   }
 }
 @media screen and (max-width: 1024px) {
