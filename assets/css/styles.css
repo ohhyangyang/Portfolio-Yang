@@ -58,6 +58,7 @@
 /*===== z index =====*/
 :root {
   --z-fixed: 100;
+  --z-standard:10;
 }
 
 /*===== BASE =====*/
@@ -70,6 +71,7 @@ html {
   scroll-behavior: smooth;
   background-color: var(--first-color);
   isolation: isolate;
+  z-index: var(--z-standard);
 }
 body {
   margin: var(--header-height) 0 0 0;
@@ -79,6 +81,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   isolation: isolate;
+  z-index: var(--z-standard);
 }
 h1,
 h2,
@@ -276,7 +279,7 @@ img {
   font-size: var(--big-font-size);
   color: var(--white-color);
   line-height: 1.1;
-  /* z-index: -1; */
+ 
 }
 .home__title span {
   /* text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5); */
@@ -288,21 +291,21 @@ img {
 .title__anime{
   cursor: pointer;
   position: relative;
+  margin-bottom: 15px;
+  z-index: var(--z-standard);
 }
 .title__anime h1{
   position: relative;
   letter-spacing: 2px;
   font-size:var(--big-font-size);
-}
 
-.title__anime {
-  margin-bottom: 15px;
 }
 
 .title__anime span {
   display: inline-block;
   position: relative;
   margin-right: 5px;
+
 }
 .title__anime span:after {
   content: "";
@@ -830,7 +833,7 @@ img {
 
   .home__title{
     width: 60%;
-    /* z-index: -3; */
+  
   }
   .home__img {
     width: 524px;
@@ -903,13 +906,13 @@ img {
   .contact__container {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
-    /* z-index: 20; */
+
   }
 
   .contact__info {
     mix-blend-mode: difference;
 
-    z-index: 40;
+    z-index: var(--z-standard);
   }
 
   .contact__form {
@@ -917,15 +920,15 @@ img {
   }
 
   .contact__subtitle {
-    z-index: 200;
+    z-index: var(--z-standard);
   }
 
   .contact__text {
-    z-index: 200;
+    z-index: var(--z-standard);
   }
 
   .contact__name {
-    z-index: 200;
+    z-index: var(--z-standard);
   }
 
   .footer__container {
@@ -987,7 +990,7 @@ img {
     height: 60px;
     /* border: 1px solid white; */
     background-color: var(--second-color);
-    z-index: -2;
+    z-index: -1;
     border-radius: 50%;
     position: absolute;
     transition-duration: 300ms;

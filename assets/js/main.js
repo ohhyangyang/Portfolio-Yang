@@ -77,6 +77,8 @@ sr.reveal('.contact__text', {interval: 200})
 sr.reveal('.contact__input', {delay: 400})
 sr.reveal('.contact__button', {delay: 600})
 
+
+
 /*===== CURSOR ANIMATION =====*/
 
 /*CURSOR*/
@@ -124,17 +126,8 @@ cursorExpand(navLogo,cursor);
 cursorExpand(navWork,cursor);
 
 
-
+/////////////////////////////////////////////////////////////////////////////////
 /*HOVER PROJECT TITLES*/
-// function handleTitiles(arr,target,listener,opacity1,opacity2,callback=false){
-//     target.addEventListener(listener,()=>{
-//         arr.forEach(item=>{
-//             item.setAttribute('style',`opacity:${opacity1};`)
-//             target.setAttribute('style',`opacity:${opacity2};`)
-//             callback && callback()
-//         })
-//     })
-// }
 
 
 const projectTitles = document.querySelectorAll('.portfolio__link-name p');
@@ -164,23 +157,11 @@ projectTitlesArr.map(targetTitle=>{
     })
 
 
-    /*CLICK PROJECT TITLE*/
-    // targetTitle.addEventListener('click',()=>{
-    //     // console.log(event)
-    //     projectTitlesArr.forEach(title=>{
-  
-    //         title.setAttribute('style','opacity:0;')
-    //         targetTitle.setAttribute('style','opacity:1; ')
 
-    //         setTimeout(()=>{
-    //             window.location.replace("https://wusic-app.herokuapp.com/");
-    //         },1000)
-    //     })
-    // })
 })
 
 function clickProject(target,url){
-    target.addEventListener('click',()=>{
+    target&&target.addEventListener('click',()=>{
         // console.log(event)
         projectTitlesArr.forEach(title=>{
   
@@ -194,7 +175,7 @@ function clickProject(target,url){
     })
 }
 
-clickProject(projectTitlesArr[0],"https://wusic-app.herokuapp.com/")
+clickProject(projectTitlesArr[0],"./work01.html")
 clickProject(projectTitlesArr[1],"https://geyang.me/M1-Project/")
 clickProject(projectTitlesArr[2],"https://drive.google.com/file/d/1H7foBJZ2M-NYxX2VR_uNlm9sutbAe3sD/view?usp=sharing")
 clickProject(projectTitlesArr[3],"https://x-book.herokuapp.com/")
@@ -202,6 +183,32 @@ clickProject(projectTitlesArr[4],"https://www.matachana.com/User-Help-Tools/HPO/
 clickProject(projectTitlesArr[5],"https://albertpastor.cat/")
 
 
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/*SCROLL ABOUT*/
+// sr.reveal('.first-section div');
+
+
+
+const firstSection=document.querySelector('.first-section');
+window.addEventListener('scroll',changeBackground);
+
+function changeBackground(){
+    const scrollY=window.pageYOffset;
+    console.log(scrollY)
+    const sectionHeight=firstSection.offsetHeight-100;
+    console.log(sectionHeight)
+    if(scrollY>sectionHeight){
+        document.querySelector('.background').classList.add('colorTwo');
+        // document.querySelector('.background').classList.remove('colorOne');
+    }else{
+        // document.querySelector('.background').classList.add('colorOne');
+        document.querySelector('.background').classList.remove('colorTwo');
+    }
+}
 
 
 

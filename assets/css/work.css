@@ -1,0 +1,107 @@
+:root {
+  --first-color: #ecdb95;
+  --second-color: #eeff04;
+  --highlight-color: rgb(255, 115, 0);
+  --white-color: #fafaff;
+  --dark-color: #2a3b47;
+  --text-color: white;
+}
+
+html {
+  background-color: white;
+}
+
+.background {
+  transition: background-color 700ms;
+  background-color: var(--first-color);
+}
+.background.colorTwo {
+  background-color: white;
+}
+.background .l-header {
+  position: static;
+  mix-blend-mode: normal;
+}
+.background .l-header .nav-top a {
+  z-index: 10;
+}
+.background .return-icon {
+  color: var(--second-color);
+  transform: scale(1.5);
+}
+.background .work-section {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  font-weight: 300;
+}
+.background .first-section {
+  padding-top: 15vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr 5fr;
+  min-height: 100vh;
+  transition: 0s;
+}
+.background .first-section p {
+  font-weight: 300;
+}
+.background .first-section .title {
+  margin-top: 40px;
+  font-weight: 700;
+}
+.background .first-section h1 {
+  font-size: 5rem;
+}
+.background .first-section .tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.background .first-section .tools ul li {
+  list-style-type: circle;
+  margin-left: 40px;
+}
+.background .second-section {
+  margin-top: 50vh;
+  color: var(--dark-color);
+}
+.background .second-section .text {
+  margin-bottom: 50px;
+}
+.background .second-section .text .title {
+  font-size: 2.5rem;
+  margin-top: 50px;
+}
+.background .second-section .text .small-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 20px;
+}
+.background .second-section .text ul {
+  list-style-type: circle;
+  margin-left: 10%;
+  width: 80%;
+}
+.background .cursor {
+  z-index: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .background .work-section {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .background .first-section {
+    display: block;
+    padding-top: 0px;
+  }
+  .background .first-section .title {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .work-section {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+/*# sourceMappingURL=work.css.map */
