@@ -176,16 +176,10 @@ function clickProject(target, url) {
 
 clickProject(projectTitlesArr[0], "./work01.html");
 clickProject(projectTitlesArr[1], "./work02.html");
-clickProject(
-  projectTitlesArr[2],
-  "https://drive.google.com/file/d/1H7foBJZ2M-NYxX2VR_uNlm9sutbAe3sD/view?usp=sharing"
-);
-clickProject(projectTitlesArr[3], "https://x-book.herokuapp.com/");
-clickProject(
-  projectTitlesArr[4],
-  "https://www.matachana.com/User-Help-Tools/HPO/1_Preparing-the-load_en.html"
-);
-clickProject(projectTitlesArr[5], "https://albertpastor.cat/");
+clickProject(projectTitlesArr[2], "./work03.html");
+clickProject(projectTitlesArr[3], "./work04.html");
+clickProject(projectTitlesArr[4], "./work05.html");
+clickProject(projectTitlesArr[5], "./work06.html");
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -193,7 +187,6 @@ clickProject(projectTitlesArr[5], "https://albertpastor.cat/");
 // sr.reveal('.first-section div');
 
 const firstSection = document.querySelector(".first-section");
-
 
 const toTop = document.querySelector(".to-top");
 const workCursor = document.querySelector(".work-cursor");
@@ -242,7 +235,6 @@ linksArr.forEach((link) => {
 //   // detects new state and compares it with the new one
 //   const scrollY = window.pageYOffset;
 //   const sectionHeight = firstSection.offsetHeight - 100;
-  
 
 //   if (
 //     document.body.getBoundingClientRect().top < scrollPos &&
@@ -253,7 +245,7 @@ linksArr.forEach((link) => {
 //     // window.scrollTo(0,secondSection.offsetTop)
 //     // secondSection.scrollIntoView()
 //     // document.body.scrollTop = secondSection.offsetTop
-//   } 
+//   }
 
 //   // saves the new position for iteration.
 //   scrollPos = document.body.getBoundingClientRect().top;

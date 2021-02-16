@@ -66,7 +66,7 @@ body{
       font-weight: 700;
     }
     h1 {
-      font-size: 5rem;
+      font-size: 4rem;
     }
 
     .tools {
@@ -133,7 +133,7 @@ body{
     }
 
     .gallery img{
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
   }
 
@@ -176,6 +176,10 @@ body{
     .first-section {
       display: block;
       padding-top: 0px;
+
+      h1{
+        font-size: 2rem;
+      }
 
       .tools {
      
