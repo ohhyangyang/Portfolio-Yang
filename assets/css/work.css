@@ -41,7 +41,7 @@ body {
   font-size: 1.2rem;
 }
 .background .first-section {
-  padding-top: 15vh;
+  padding-top: 10vh;
   display: grid;
   grid-template-columns: 1fr 2fr 5fr;
   min-height: 100vh;
@@ -66,11 +66,14 @@ body {
   margin-left: 40px;
 }
 .background .second-section {
-  margin-top: 40vh;
+  margin-top: 20vh;
   color: var(--dark-color);
 }
 .background .second-section .text {
   margin-bottom: 50px;
+}
+.background .second-section .text .logo {
+  width: 200px;
 }
 .background .second-section .text .title {
   font-size: 2.5rem;
@@ -78,6 +81,9 @@ body {
   margin-bottom: 40px;
   border-bottom: black 1px solid;
   color: var(--first-color);
+}
+.background .second-section .text .indent {
+  text-indent: 2rem;
 }
 .background .second-section .text .small-title {
   font-size: 1.2rem;
