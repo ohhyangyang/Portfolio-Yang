@@ -88,7 +88,7 @@ const cursor = document.querySelector(".cursor");
 document.addEventListener("mousemove", (e) => {
   cursor.setAttribute(
     "style",
-    "top: " + (e.pageY - 40) + "px; left: " + (e.pageX - 40) + "px;"
+    "top: " + (e.pageY - 20) + "px; left: " + (e.pageX - 20) + "px;"
   );
 });
 
@@ -96,9 +96,9 @@ document.addEventListener("wheel", (e) => {
   cursor.setAttribute(
     "style",
     "top: " +
-      (e.pageY - 30) +
+      (e.pageY - 20) +
       "px; left: " +
-      (e.pageX - 30) +
+      (e.pageX - 20) +
       "px; transition-duration: 0ms;"
   );
 });
@@ -181,8 +181,42 @@ clickProject(projectTitlesArr[3], "./work04.html");
 clickProject(projectTitlesArr[4], "./work05.html");
 clickProject(projectTitlesArr[5], "./work06.html");
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*SCROLL CHANGE BACKGROUND-COLOR*/
+const about = document.querySelector('.about');
+const skills = document.querySelector('.skills');
+const indexBackground=document.querySelector('.index-background')
+const contact=document.querySelector('.contact')
 
+window.addEventListener('scroll',changeIndexBackground);
+
+changeIndexBackground()
+
+function changeIndexBackground(){
+  if(about){
+    const scrollY = window.pageYOffset;
+    const sectionHeight1 = about.offsetTop-200;
+    const sectionHeight2 = skills.offsetTop-200;
+    const sectionHeight3 = contact.offsetTop-200;
+    if(scrollY>sectionHeight1&&scrollY<sectionHeight2){
+      indexBackground.setAttribute('style','background-color:#efded2;')
+    }else if(scrollY>sectionHeight2&&scrollY<sectionHeight3){
+      indexBackground.setAttribute('style','background-color:#d0efc9;')
+    }else if(scrollY>sectionHeight3){
+      indexBackground.setAttribute('style','background-color:#bccbca;')
+    }
+    
+    
+    
+    else{
+      indexBackground.setAttribute('style','background-color: var(--first-color);')
+    }
+  }
+  
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// WORK
 /*SCROLL CHANGE BACKGROUND-COLOR*/
 // sr.reveal('.first-section div');
 
@@ -190,6 +224,7 @@ const firstSection = document.querySelector(".first-section");
 
 const toTop = document.querySelector(".to-top");
 const workCursor = document.querySelector(".work-cursor");
+const background=document.querySelector(".background");
 
 window.addEventListener("scroll", changeBackground);
 
@@ -208,9 +243,11 @@ function changeBackground() {
   } else {
     // document.querySelector('.background').classList.add('colorOne');
     document.querySelector(".background").classList.remove("colorTwo");
-    toTop.setAttribute("style", "display:display;");
+    toTop.setAttribute("style", "display:none;");
   }
 }
+
+
 
 /*TOTOP EXPANSION*/
 

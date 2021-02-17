@@ -103,6 +103,18 @@ img {
   display: block;
 }
 
+/*===== BACKGROUND ===== */
+.index-background{
+transition: 1s;
+}
+.colorOne{
+  background-color:#d0d5ff;
+  
+}
+.colorTwo{
+  background-color: #fffcf1;
+}
+
 /*===== CLASS CSS ===== */
 .section {
   padding: 3rem 0;
@@ -110,7 +122,7 @@ img {
 .section-title {
   position: relative;
   font-size: var(--h2-font-size);
-  color: var(--white-color);
+  color: white;
   margin: var(--mb-4) 0;
   text-align: center;
   /* font-weight: 300; */
@@ -327,7 +339,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(1) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 110ms;
 }
 
@@ -340,7 +352,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(2) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 220ms;
 }
 
@@ -353,7 +365,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(3) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 330ms;
 }
 
@@ -366,7 +378,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(4) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 440ms;
 }
 
@@ -379,7 +391,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(5) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 550ms;
 }
 
@@ -392,7 +404,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(6) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 660ms;
 }
 
@@ -405,7 +417,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(7) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 770ms;
 }
 
@@ -418,7 +430,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(8) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 880ms;
 }
 
@@ -431,7 +443,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(9) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 990ms;
 }
 
@@ -444,7 +456,7 @@ img {
 }
 
 .share:hover > h1 > span:nth-child(10) {
-  color: #39393B;
+  color: var(--first-color);
   transition-delay: 1100ms;
 }
 
@@ -507,7 +519,7 @@ img {
 
 .about__subtitle {
   font-size: var(--h2-font-size);
-  color: var(--second-color);
+  color: white;
   margin-bottom: var(--mb-1);
   transition: all 0.2s ease-in-out;
   display: inline-block;
@@ -515,7 +527,8 @@ img {
 
 .about__text {
   margin-bottom: var(--mb-4);
-  font-weight: 500;
+  font-weight: 300;
+  color: var(--dark-color);
 }
 .about__profession {
   display: block;
@@ -525,9 +538,12 @@ img {
   font-size: 1.4rem;
   margin: 0 var(--mb-1);
 }
+.about__social-icon  i{
+  color: var(--dark-color);
+}
 
 .about .yellow {
-  color: var(--second-color);
+  color: white;
 }
 
 /* ===== SKILLS =====*/
@@ -536,17 +552,18 @@ img {
   max-width: 1200px;
 }
 .skills__subtitle {
-  color: var(--second-color);
+  color: white;
   margin-bottom: var(--mb-2);
   font-size: 1.8rem;
 }
 .skills__name {
   display: inline-block;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
   margin-right: var(--mb-1);
   margin-bottom: var(--mb-1);
   padding: 0.25rem 0.5rem;
+  color: var(--dark-color);
 }
 
 /* ===== CONTACT =====*/
@@ -556,19 +573,21 @@ img {
 
 .contact__subtitle {
   font-size: 1.8rem;
-  color: var(--second-color);
+  color: white;
 }
 .contact__text {
   display: inline-block;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 300;
+  color: var(--dark-color);
   /* margin-bottom: var(--mb-4); */
 }
 .contact__text.email {
   text-decoration: underline;
+  
 }
-.contact__text.email:hover {
-  color: #ffdc4e;
+.contact__text.email a {
+  color: var(--dark-color);
 }
 .contact__inputs {
   display: grid;
@@ -601,6 +620,7 @@ img {
   margin-top: 100px;
   margin-bottom: 100px;
   font-weight: 300;
+  color: var(--dark-color);
 }
 
 /* ===== FOOTER=====*/
@@ -789,7 +809,7 @@ img {
   }
 
   .l-header {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
   }
 
   .nav__works {
@@ -838,7 +858,7 @@ img {
   .home__img {
     width: 524px;
     right: 10%;
-    z-index: -2;
+    z-index: 15;
   }
 
   .about__container {
@@ -856,7 +876,7 @@ img {
   }
 
   .about__me {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
   }
   .about__subtitle {
   }
@@ -871,7 +891,7 @@ img {
   
 
   .skills__box {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
   }
 
   .skills__subtitle {
@@ -881,7 +901,7 @@ img {
   }
 
   .skills__img {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
   }
 
   .portfolio .works-title{
@@ -910,7 +930,7 @@ img {
   }
 
   .contact__info {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 
     z-index: var(--z-standard);
   }
@@ -986,20 +1006,21 @@ img {
 
   /*===== CURSOR =====*/
   .cursor {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     /* border: 1px solid white; */
     background-color: var(--second-color);
-    z-index: -1;
+    z-index: 10;
     border-radius: 50%;
     position: absolute;
-    transition-duration: 300ms;
+    transition-duration: 200ms;
     transition-timing-function: ease-out;
     pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--dark-color);
+    mix-blend-mode: color;
   }
 
   .work-cursor {

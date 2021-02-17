@@ -42,8 +42,8 @@ body{
   }
 
   .work-section {
-    margin-left: 15vw;
-    margin-right: 15vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     font-weight: 300;
     font-size: 1.2rem;
   }
@@ -113,6 +113,9 @@ body{
         font-weight: 500;
         margin-top: 20px;
       }
+      img.small{
+        width: 60%;
+      }
       ul {
         list-style-type: circle;
         margin-left: 5%;
@@ -141,6 +144,7 @@ body{
 
   .cursor {
     z-index: 1;
+    mix-blend-mode: normal;
     &.expand {
       width: 90px;
       height: 90px;
