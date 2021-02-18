@@ -870,7 +870,7 @@ transition: 1s;
   }
   .about__img {
     width: 150px;
-    height: 200px;
+    height: 170px;
     transition: height 1s;
     position: relative;
   }
