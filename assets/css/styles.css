@@ -879,11 +879,10 @@ transition: 1s;
     content: 'HOVER ME!';
   }
 
-  /* .about__img:hover {
-    width: 165px;
-    height: 185px;
+  .about__img:hover::after {
+    content: 'LET\'S WORK!!';
     
-  } */
+  }
 
   .about__img img {
     width: 165px;
