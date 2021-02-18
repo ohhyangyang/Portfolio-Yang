@@ -505,16 +505,17 @@ transition: 1s;
 .about__img {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
-  width: 120px;
-  height: 120px;
-  background-color: var(--first-color);
 
-  border-radius: 50%;
+  width: 120px;
+  height: 62.159px;
+  /* background-color: var(--first-color); */
+
+  /* border-radius: 50%; */
   overflow: hidden;
 }
 .about__img img {
   width: 100px;
+  height: 114px;
 }
 
 .about__subtitle {
@@ -868,12 +869,36 @@ transition: 1s;
     padding: 4rem 0;
   }
   .about__img {
-    width: 200px;
+    width: 150px;
     height: 200px;
+    transition: height 1s;
+    position: relative;
   }
+
+  .about__img::after{
+    content: 'HOVER ME!';
+  }
+
+  /* .about__img:hover {
+    width: 165px;
+    height: 185px;
+    
+  } */
+
   .about__img img {
     width: 165px;
+    height: 130px;
+    position: absolute;
+    bottom: -59px;
+    transition: 500ms;
   }
+
+  
+  .about__img:hover img {
+   
+    bottom: 0px;
+  }
+  
 
   .about__me {
     /* mix-blend-mode: difference; */
