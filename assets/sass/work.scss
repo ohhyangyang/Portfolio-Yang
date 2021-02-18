@@ -146,11 +146,11 @@ body{
     z-index: 1;
     mix-blend-mode: normal;
     &.expand {
-      width: 90px;
-      height: 90px;
-      color: var(--dark-color);
+      // width: 90px;
+      // height: 90px;
+      // color: var(--dark-color);
   
-      transition-duration: 200ms;
+      // transition-duration: 200ms;
     }
   }
 

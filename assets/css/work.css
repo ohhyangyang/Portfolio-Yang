@@ -112,12 +112,6 @@ body {
   z-index: 1;
   mix-blend-mode: normal;
 }
-.background .cursor.expand {
-  width: 90px;
-  height: 90px;
-  color: var(--dark-color);
-  transition-duration: 200ms;
-}
 .background .to-top {
   display: none;
   z-index: 0;

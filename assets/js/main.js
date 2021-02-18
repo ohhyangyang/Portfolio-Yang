@@ -251,14 +251,14 @@ function changeBackground() {
 
 /*TOTOP EXPANSION*/
 
-cursorExpand(toTop, workCursor, "TOP");
+cursorExpand(toTop, cursor, "TOP");
 
 /*RESOURCE EXPANSION*/
 const links = document.querySelectorAll(".show-cursor");
 const linksArr = [...links];
 linksArr.forEach((link) => {
   // console.log(link)
-  cursorExpand(link, workCursor, "OPEN");
+  cursorExpand(link, cursor, "OPEN");
 });
 
 /*SCROLL TO SECOND SECTION*/

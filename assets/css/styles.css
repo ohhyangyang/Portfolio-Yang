@@ -1048,14 +1048,14 @@ transition: 1s;
     mix-blend-mode: color;
   }
 
-  .work-cursor {
+  /* .work-cursor {
     z-index: 20;
-  }
+  } */
 
   .expand {
-    width: 90px;
-    height: 90px;
+    transform: scale(1.8);
     color: var(--dark-color);
+    font-size: 0.5rem;
 
     transition-duration: 200ms;
   }
