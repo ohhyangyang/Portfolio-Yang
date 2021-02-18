@@ -879,14 +879,8 @@ transition: 1s;
     content: 'HOVER ME!';
   }
 
-<<<<<<< HEAD
   .about__img:hover::after{
     content: 'LET\'S WORK!!';
-=======
-  .about__img:hover::after {
-    content: 'LET\'S WORK!!';
-    
->>>>>>> ebf7e8f99230b2f216ac1043a917af88b25cc8fc
   }
 
   .about__img img {
